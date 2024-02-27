@@ -1,5 +1,4 @@
 name: Curl Request
-
 on:
   schedule:
     - cron: '*/10 * * * *'  # Schedule to run every 10 minutes
@@ -11,3 +10,17 @@ jobs:
     steps:
       - name: Run Curl Request
         run: curl --location 'https://app.shubhasaimohapatra.in/projects' --data ''
+
+  curl_request_wexp:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Run Curl Request
+        run: curl --location 'https://app.shubhasaimohapatra.in/workexps' --data ''
+
+  curl_request_skills:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Run Curl Request
+        run: curl --location 'https://app.shubhasaimohapatra.in/skills' --data ''
